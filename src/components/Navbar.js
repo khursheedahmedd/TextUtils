@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Link} from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
@@ -16,7 +16,7 @@ export default function Navbar(props) {
               <a className="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">About</Link>
+              {/* <link className="nav-link" to="/about">About</link> */}
             </li>
             <li className="nav-item">
               {/* <a className="nav-link disabled" aria-disabled="true">Disabled</a> */}
@@ -25,14 +25,14 @@ export default function Navbar(props) {
           {/* <div>
         <button type="button" className="btn btn-outline-success mx-3">Enable Dark Mode</button>
         </div> */}
-          <div className={`form-check form-switch text-${props.mode==='dark'?'light':'dark'} mx-6`}>
-            <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
+          <div className={`form-check form-switch text-${props.mode === 'dark' ? 'light' : 'dark'} mx-6`}>
+            <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
           </div>
-          <form className="d-flex mx-3" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{backgroundColor: props.mode === 'dark'?'#7174766C':'white', color: props.mode === 'dark' ? 'white':'black'}}/>
-            {/* <button className="btn btn-outline-primary" type="submit">Search</button> */}
-          </form>
+          {/* <form className="d-flex mx-3" role="search">
+            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{ backgroundColor: props.mode === 'dark' ? '#7174766C' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }} />
+            {/* <button className="btn btn-outline-primary" type="submit">Search</button> }
+          </form> */}
         </div>
       </div>
     </nav>
