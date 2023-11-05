@@ -1,0 +1,30 @@
+
+ .navbar-toggler-icon {
+    background-color: #fff;
+  }
+
+.navbar-nav .nav-link {
+  color: white; /* Set the text color to white */
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+    font-size: 15px;
+    margin-left: 30px;
+  }
+
+  .navbar-nav .nav-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust the line height as needed */
+    background-color: #fe5c97; /* Change the color of the line */
+    transition: width 0.3s ease; /* Add a transition for a smooth effect */
+  }
+
+
+.navbar-nav .nav-item:hover::before {
+    width: 90%; /* Expand the line to full width on hover */
+  }
